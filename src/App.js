@@ -5,7 +5,7 @@ import Footer from "./component/layout/Footer/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import WebFont from "webfontloader";
 import Home from "./component/Home/Home";
-import Product from "./component/Product/Product";
+import ProductDetails from "./component/Product/ProductDetails";
 
 function App() {
   useEffect(() => {
@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Header />
       <Route exact path='/' component={Home} />
-      <Route exact path='/products' component={Product} />
+      <Route exact path='/product/:id' component={ProductDetails} />
       <Footer />
     </Router>
   );
