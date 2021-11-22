@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src *; img-src 'self'  https://b.stripecdn.com *  data: https:; script-src 'self' 
+    'unsafe-inline' 'unsafe-eval' *; style-src  'self' https://b.stripecdn.com 'unsafe-inline' * ;
+    frame-src 'self' https://*.stripe.com 
+    "
+    />
+    <!-- This header added for header "frame-ancestors" but seem to be not working.-->
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-Frame-Options" value="SAMEORIGIN" />
+      </customHeaders>
+    </httpProtocol>
+    <meta
       name="description"
       content="Web site created using create-react-app"
     />
